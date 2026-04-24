@@ -1,16 +1,75 @@
-# React + Vite
+# Task Manager Frontend ⚛️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean frontend built with React to interact with a JWT-secured backend API.
 
-Currently, two official plugins are available:
+This project demonstrates how to connect a frontend application to a real backend with authentication, protected routes, and full CRUD functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This frontend allows users to:
 
-## Expanding the ESLint configuration
+- Register and log in
+- Store authentication tokens
+- View their personal tasks
+- Create, update, and delete tasks
+- Interact with a live deployed backend API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application is fully connected to a production backend and database.
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- JavaScript
+- Fetch API
+- Vercel (Frontend deployment)
+
+---
+
+## 🔐 Authentication
+
+Authentication is handled using JWT.
+
+- The token is stored in `localStorage`
+- It is sent in each request via:
+
+```http
+Authorization: Bearer <token>
+This ensures that all operations are tied to the authenticated user.
+🌐 Live Demo
+
+Frontend:
+
+https://frontend-task-manager-proyecto-de-p.vercel.app/
+
+Backend API:
+
+https://task-manager-088u.onrender.com
+
+🔗 Backend Repository
+
+https://github.com/gael-fernandez/task-manager
+
+⚠️ Notes
+
+The backend is hosted on Render's free tier.
+After inactivity, the first request may take a few seconds while the server wakes up.
+
+Once active, the application performs normally.
+▶️ Run Locally
+git clone https://github.com/gael-fernandez/frontend-task-manager-proyecto-de-portafolio
+cd frontend-task-manager-proyecto-de-portafolio
+npm install
+npm run dev
+📈 Future Improvements
+UI/UX enhancements
+Better error handling
+Token expiration handling
+State management improvements
+👨‍💻 Author
+
+Developed by Gael Fernández as part of a fullstack portfolio project.
